@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#map {
+    height: 50vh;
+    width: 100%;
+    z-index: 3;
+}
+
+.connect {
+    margin-top: 200px;
+}
+
+.button-connect {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#container_list {
+    height: inherit;
+    margin: 0;
+    flex: 1;
+}
+
+#main_menu {
+    min-height: initial;
+}
+
+#sidenav {
+    margin-bottom: 0;
+}
+
+#sidenav > * > * {
+    margin: 10px;
+}
+
+.map_list {
+    width: auto;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.margin-top {
+    margin-top: 20px;
+}
+
+.margin {
+    margin: 30px;
+}
+
+.small-margin {
+    margin: 10px;
+}
+
+.padding {
+    padding: 20px;
+}
+
+.margin > * {
+    margin: 15px;
+}
+
+.com_content {
+    overflow: hidden;
+    max-width: 300px;
+    word-wrap: break-word;
+}
+
+.map_detail {
+    top: 40px;
+    height: 50vh;
+}
+
+.input, .select {
+    margin: 5px 0;
+}
+
+.textarea {
+    margin: 5px 0;
+    resize: none;
+}
+
+nav {
+    padding-bottom: 10px;
+}
+
+.navbar-burger {
+    position: fixed;
+    top: 0;
+    right: 20px;
+    border-radius: 50%;
+    z-index: 999;
+}
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 200; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0); /* Black fallback color */
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+.full-table {
+	width: 75vw;
+}
+
+@media only screen and (max-width: 1088px) {
+    body {
+        font-size: 0.8em;
+    }
+    .container {
+        margin: 0;
+        width: 100%;
+    }
+
+    nav {
+        min-width: 40%;
+    }
+
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+	
+	.full-table {
+		width: 60vw;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.full-table {
+		width: 100vw;
+	}
+}
