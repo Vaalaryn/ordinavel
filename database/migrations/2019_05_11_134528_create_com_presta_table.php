@@ -15,6 +15,9 @@ class CreateComPrestaTable extends Migration
     {
         Schema::create('com_presta', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigIncrements('id_presta');
+            $table->bigIncrements('nigend');
+            $table->text('contenu');
             $table->timestamps();
         });
     }
