@@ -15,9 +15,9 @@ class CreateComForumTable extends Migration
     {
         Schema::create('com_forum', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('content');
-            $table->bigIncrements('nigend');
             $table->bigIncrements('id_forum');
+            $table->bigIncrements('nigend');
+            $table->text('contenu');
             $table->timestamps();
         });
     }
