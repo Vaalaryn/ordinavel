@@ -15,6 +15,7 @@ class CreateTypeRepasTable extends Migration
     {
         Schema::create('type_repas', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('libele', 100);
             $table->timestamps();
         });
     }

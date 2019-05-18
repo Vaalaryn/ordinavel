@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->integer('id_grade');
             $table->string('num', 12);
             $table->string('password', 255);
+            $table->smallInteger('rang');
             $table->rememberToken();
             $table->timestamps();
         });

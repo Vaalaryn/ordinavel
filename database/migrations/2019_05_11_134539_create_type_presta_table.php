@@ -15,6 +15,7 @@ class CreateTypePrestaTable extends Migration
     {
         Schema::create('type_presta', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('libele', 100);
             $table->timestamps();
         });
     }
