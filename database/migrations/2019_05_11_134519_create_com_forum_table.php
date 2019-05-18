@@ -19,6 +19,12 @@ class CreateComForumTable extends Migration
             $table->bigIncrements('nigend');
             $table->text('contenu');
             $table->timestamps();
+
+            //clés étrangères
+            $table->foreign('id_forum')
+                ->references('id')->on('forums');
+            $table->foreign('nigend')
+                ->references('nigend')->on('users');
         });
     }
 

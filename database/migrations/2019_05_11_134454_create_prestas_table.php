@@ -31,6 +31,14 @@ class CreatePrestasTable extends Migration
             $table->text('dispo');
             $table->text('adresse');
             $table->timestamps();
+
+            //clé etrangère
+            $table->foreign('nigend')
+                ->references('nigend')->on('users');
+            $table->foreign('id_type_repas')
+                ->references('id')->on('type_repas');
+            $table->foreign('id_type_prestas')
+                ->references('id')->on('type_presta');
         });
     }
 

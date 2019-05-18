@@ -17,6 +17,10 @@ class CreatePasswordResetsTable extends Migration
             $table->bigIncrements('nigend');
             $table->string('token');
             $table->timestamp('created_at')->nullable();
+
+            //clé etrangère
+            $table->foreign('nigend')
+                ->references('nigend')->on('users');
         });
     }
 

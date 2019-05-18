@@ -25,6 +25,10 @@ class CreateUsersTable extends Migration
             $table->smallInteger('rang');
             $table->rememberToken();
             $table->timestamps();
+
+            //clé etrangère
+            $table->foreign('id_grade')
+                ->references('id')->on('grades');
         });
     }
 

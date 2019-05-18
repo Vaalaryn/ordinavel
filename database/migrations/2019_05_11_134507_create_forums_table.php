@@ -19,6 +19,10 @@ class CreateForumsTable extends Migration
             $table->string('titre', 100);
             $table->text('contenu');
             $table->timestamps();
+
+            //clé etrangère
+            $table->foreign('nigend')
+                ->references('nigend')->on('users');
         });
     }
 

@@ -19,6 +19,12 @@ class CreateComPrestaTable extends Migration
             $table->bigIncrements('nigend');
             $table->text('contenu');
             $table->timestamps();
+
+            //clés étrangères
+            $table->foreign('id_presta')
+                ->references('id')->on('presta');
+            $table->foreign('nigend')
+                ->references('nigend')->on('users');
         });
     }
 
